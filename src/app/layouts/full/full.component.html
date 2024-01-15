@@ -1,0 +1,25 @@
+<div class="container-fluid display-table">
+    <div class="row display-table-row">
+        <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+            <div class="logo">
+                <a hef="home.html">
+                </a>
+            </div>
+            <div class="navi">
+                <ul>
+                    <li *ngFor="let item of menu" class="active"><a [routerLink]="['/'+ item.path]"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">{{item.name}}</span></a></li>
+                <!--<li><a [routerLink]="['/directives-demo']"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Directives</span></a></li>
+                    <li><a [routerLink]="['/login']"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Login</span></a></li>
+                    <li><a [routerLink]="['/calender']"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calender</span></a></li>
+                    <li><a [routerLink]="['/users']"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a></li>
+                    <li><a [routerLink]="['/settings']"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a></li>
+                    <li><a [routerLink]="['/typescript']"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Typescript</span></a></li>-->
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-10 col-sm-11 display-table-cell v-align"> 
+        <router-outlet></router-outlet> 
+        </div>
+    </div>
+</div>
+

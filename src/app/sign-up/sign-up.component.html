@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="text-center">
+            <h1>Sign Up</h1>
+            <p>Register Yourself!</p>
+          </div>
+
+            <form [formGroup]="signUpform" (ngSubmit)="signUp()">
+              <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Full Name</label>
+                    <input formControlName="fullName" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                    <span class="text-danger" *ngIf="signUpform.controls['fullName'].dirty && signUpform.hasError('required','fullName')">*Full name id required</span>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
+                <input formControlName="mobile" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                <span class="text-danger" *ngIf="signUpform.controls['mobile'].dirty && signUpform.hasError('required','mobile')">*Mobile number required</span>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" > 
+                <span class="text-danger" *ngIf="signUpform.controls['email'].dirty && signUpform.hasError('required','email')">*Email id required</span>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1"> <br>
+                <span class="text-danger" *ngIf="signUpform.controls['password'].dirty && signUpform.hasError('required','password')">*Password required</span>
+              </div>
+            
+              <button type="submit" class="btn btn-primary" [disabled]="!signUpform.valid">Sign Up</button>
+            </form>
+            <a class="swRoiting" routerLink="/login">already Registered? Log In</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

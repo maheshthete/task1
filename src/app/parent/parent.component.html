@@ -1,0 +1,90 @@
+<b>parent works!</b>
+<!-- How components interact between each other?
+    - to check this we made one parent component and one child component.
+    - check parent component
+    - then open parent component using open in integrated terminal
+    - then make new child component (ng g c child)
+    - child component cha data jr aplyala parent component la show karaycha asel tr ,
+    - parent madhe <app-child></app-child> use karava lagel.
+    - now aata aplyala data send karaycha aahe from parent to child and child to parent
+    - parent to child -we used @input decorator
+    - child to parent output decorator
+    - and input and output decorator aapan child madhe use karnar aahot
+    - input decorator sathi aapan proprty binding use karto
+    - output decorator sathi aapan event binding use karto, we also need eventEmitter for event binding
+    - -------------------------------------------------------------------------------------------------------------------------------
+    open child and make 1 varibale, while making variable use @input decorator, like , 
+       @Input() varChild: string = 'child-data';
+    to print this data we add this variable in interporlation in child component HTML {{varChild}}
+    - so aadhich aapan parent madhe <app-child></app-child> use kel aahe mhnun , mhnun 
+    - in simple way aplyala 2 variables banvayche aahet, 
+      1. child.component.ts jya madhe variable la aplyala @input() decorative use karaych aahe, then print this var using {{}} in child HTML.
+      2. 2nd variable ab hm parent.component.ts me banana hai and esko hme using {{}} parent.component.html madhe print karaych aahe
+    - next step aapla main kam kay aahe, ki aplyala parent chya variable cha data child madhe show karaycha aahe,
+    - mhnun aapan child varable == parent variable asign karu, like but using property binding, esme child ke variable me parent ke
+     variable ka data bind hoga
+     how to bind , see
+     <app-child [varChild]="parentVar"></app-child>
+                child-var.  parent var
+    - thats it, this all steps completed parent to child interaction
+-->
+
+<p>{{parentVar}}</p>
+<!---
+<p>{{parentVar2}}</p>
+<p>{{parentVar3}}</p>-->
+<p>{{valueReceivedFromChild}}</p>
+
+------------------------------------------------------------------------------
+<b>Child component</b>
+<app-child [varChild]="parentVar" (childevent)="parentMethod($event)"></app-child>
+
+<b>Child component</b>
+<app-child [varChild]="parentVar" (childevent)="parentMethod($event)"></app-child>
+
+<b>Child component</b>
+<app-child [varChild]="parentVar" (childevent)="parentMethod($event)"></app-child>
+<!--
+<app-child [varChild11]="parentVar2"></app-child>
+<app-child [varChild11]="parentVar3" (childevent)="parentMethod($event)"></app-child> -->
+
+
+ 
+------------------------------------------------------------------------------
+<h3>Input</h3>
+<p>
+    parent to child - input 
+    property binding
+</p>
+
+<h3>Output</h3>
+<p>
+    child to parent 
+    event binding, EventEmmiter
+</p>
+<h1>Output decorator-child to parent</h1>
+<!-- 
+     
+    1- using output decorator we can send data from child to parent component
+    2. we achived this data sending by event binding
+    3. we add output decorator in child component only, 
+    4. in both weather it is input decorator OR output decorator, we declare this decorator in child component.
+    5. then make variable using output decorator in child component, like,
+       @Output() childevent: EventEmitter<string> = new EventEmitter<string>();
+       and assign value to child variable,
+                    ngOnInit(): void {
+                          this.childevent.emit('Hello!! This is from child component.');
+                    }
+    6. make 2nd variable in parent.component.ts, like,
+       valueReceivedFromChild: string;
+    7. then make 1 method in parent.component.ts, and call parent variable like,
+                parentMethod(Event: any){
+                        this.valueReceivedFromChild = Event;
+                    }
+    8. next step to send data by using following event binding,
+       <app-child (childevent)="parentMethod($event)"></app-child>
+    9. always keep in mind in app-child, left side is either child-event, or chind property binding, means ye child ka part hai, and
+       right side will be parent variable or method.
+    10.last show parent variable, {{ valueReceivedFromChild: string;}}
+       
+-->

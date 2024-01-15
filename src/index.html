@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LazyLoading</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body class="mat-typography">
+<app-root></app-root>
+
+<!-- 
+  Gaurds in Angular-
+   suppose aapka userhai and aap chahte ho vo login hone ke bad hi aapke website ka koi perticular part dekhe to ye hm authentication se
+   achieve krte hai.
+   means kisi perticulat component ko kisi perticular condition se access kiya ja sake
+   ye hm Authentication gaurd ke use se kr sakte hai
+   esko implement knr ke kahi sare ways hote hai
+   different types of gaurds are-
+
+   Different types of guards,
+
+      CanActivate guard (e.g. it checks route access).
+      CanActivateChild guard (checks child route access).
+      CanDeactivate guard (prompt for unsaved changes).
+      Resolve guard (pre-fetching route data).
+      CanLoad guard (check before loading feature module assets).
+
+  
+-->
+
+<!-- JavaScript Bundle with Popper -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+<!--For fake json server: command:
+  
+  json-server --watch db.json    
+   
+-->
+
+<!-- How to add json server-->
+<!-- 
+  1. install Json server- search for npm json server by following command
+     npm install json-server
+  2. sir provided us or we can download dp.json folder, 
+  3. add this folder near packages.json, how? open drive from your PC, open project, open src and paste db.json here
+  4. then open project in VS code
+  5. now how to run this server? two ways are there:
+     - json-server --watch db.json  (run this command)  OR
+     - open package.json, in script{} add this = "run-db":"json-server --watch db.json" (when you write click on and direct you can Run script)
+  
+-->
+</body>
+
+</html>

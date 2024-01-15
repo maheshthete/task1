@@ -1,0 +1,123 @@
+{
+  "employees": [
+    {
+      "empName": "Malhar",
+      "empDeppt": "Admin",
+      "empDateJ": "2022-08-05T18:30:00.000Z",
+      "empsalary": 50000,
+      "email": "team1@gmail.com",
+      "id": 4
+    },
+    {
+      "empName": "Kairav",
+      "empDeppt": "Admin",
+      "empDateJ": "2022-08-12T18:30:00.000Z",
+      "empsalary": 45000,
+      "email": "team11@gmail.com",
+      "id": 5
+    },
+    {
+      "empName": "Nidhi",
+      "empDeppt": "Admin",
+      "empDateJ": "2022-08-08T18:30:00.000Z",
+      "empsalary": 500000,
+      "email": "team12@gmail.com",
+      "id": 6
+    }
+  ],
+  "signUpUsers": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "fullName": "swati baode",
+      "email": "swati.bajode@im.com",
+      "password": "123456",
+      "mobile": 9284006880,
+      "id": 3
+    },
+    {
+      "fullName": "swati bajode",
+      "email": "swati.bajode@immply.com",
+      "password": "123456",
+      "mobile": 9284006880,
+      "id": 4
+    },
+    {
+      "fullName": "Harshada",
+      "email": "h@gmail.com",
+      "password": "123456",
+      "mobile": 1234587415,
+      "id": 5
+    },
+    {
+      "fullName": "",
+      "email": "",
+      "password": "",
+      "mobile": "",
+      "id": 6
+    },
+    {
+      "fullName": null,
+      "email": null,
+      "password": null,
+      "mobile": null,
+      "id": 7
+    },
+    {
+      "fullName": "Riya Nawalkar",
+      "email": "riya@mailinator.com",
+      "password": "123456",
+      "mobile": 9595874585,
+      "id": 8
+    },
+    {
+      "fullName": "Nidhi P.",
+      "email": "nidhi@mailinator.com",
+      "password": "123456",
+      "mobile": 9841524152,
+      "id": 9
+    },
+    {
+      "fullName": "Rahul",
+      "email": "rahul@mailinator.com",
+      "password": "123456",
+      "mobile": 9854002510,
+      "id": 10
+    },
+    {
+      "fullName": "rahul",
+      "email": "rahul@gmail.com",
+      "password": "123456",
+      "mobile": 9284006880,
+      "id": 11
+    },
+    {
+      "fullName": "mahesh",
+      "email": "mahesh12@gmail.com",
+      "password": "mahesh123A",
+      "mobile": 847534634578,
+      "id": 12
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "roles": [
+    {
+      "roleId": 10,
+      "name": "manager"
+    },
+    {
+      "roleId": 20,
+      "name": "developer"
+    }
+  ]
+}

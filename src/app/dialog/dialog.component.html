@@ -1,0 +1,43 @@
+<h1 mat-dialog-title>Add Employee Form</h1>
+<div mat-dialog-content>
+    <form [formGroup]="empForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Employee Name</mat-label>
+            <input formControlName="empName" matInput placeholder="Enter Employee Name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Employee Deppt</mat-label>
+            <mat-select formControlName="empDeppt" placeholder="select deppt">
+                <mat-option value="Admin">Admin</mat-option>
+                <mat-option value="Accounts">Accounts</mat-option>
+                <mat-option value="UI">UI</mat-option>
+                <mat-option value="DevOps">DevOps</mat-option>
+                <mat-option value="PHP Developer">PHP Developer</mat-option>
+                <mat-option value="QA">QA</mat-option>
+            </mat-select>
+        </mat-form-field>
+      <mat-form-field appearance="outline">
+            <mat-label>Choose a date of Joining</mat-label>
+            <input formControlName="empDateJ" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>  
+        <mat-form-field appearance="outline">
+            <mat-label>Salary</mat-label>
+            <input formControlName="empsalary" type="number" matInput placeholder="Enter Salary">
+        </mat-form-field>    
+       <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+          <!-- <textarea formControlName="email" matInput></textarea>--> 
+          <input formControlName="email" type="email" matInput placeholder="Enter email"pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}">
+        </mat-form-field> 
+          
+        
+    </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+    <button style="margin-left: 10px;" mat-raised-button color="primary" (click)="addemp()">{{actionBtn}}</button> 
+</div>
+
+
